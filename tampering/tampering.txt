@@ -1,0 +1,4 @@
+
+The vulnerability in the initial code is related to user data storage where the username is stored in the session without any sanitization, allowing an attacker
+to inject malicious HTML or JavaScript code into the user's name, which would be stored.
+In the secure version, escapeHTML prevents special HTML characters in the user input, ensuring that any potentially malicious code is neutralized.

@@ -1,1 +1,6 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+The vulnerability is that the session information stored in the client-side cookie lacks security, leaving it vulnerable to attacks like request forging.
+
+In the secure version, the secret key is retrieved from a command-line argument instead of hardcoded, keeping the secret key out of the source code. Also it sets the httpOnly flag
+to true, which ensures that the session cookie cannot be accessed via client-side scripts.
